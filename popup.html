@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkedIn Profile Exporter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <h1>LinkedIn Profile Exporter <span class="version" id="version"></span></h1>
+      <p class="intro">
+        Turn the LinkedIn profile you have open into a clean local export you can keep or use as context with AI tools.
+      </p>
+
+      <label class="check">
+        <input id="includeContact" type="checkbox" checked />
+        <span>Include visible Contact info</span>
+      </label>
+
+      <label class="check">
+        <input id="scanDetailPages" type="checkbox" checked />
+        <span>Capture complete important detail sections</span>
+      </label>
+
+      <button id="exportBtn" type="button">Export current profile</button>
+      <div id="status" class="status" role="status" aria-live="polite">Ready.</div>
+      <div id="details" class="details"></div>
+
+      <p class="footnote">
+        The extension captures supported profile sections that are actually available, then opens a separate export window with the generated Markdown and available profile images. Featured, Recommendations, Interests and Activity are excluded.
+      </p>
+    </main>
+    <script src="core/runtime.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

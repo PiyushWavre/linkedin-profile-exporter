@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Profile Exporter",
+  "version": "1.0.0",
+  "description": "Export the LinkedIn profile open in Chrome to a local, AI-ready ZIP with clean Markdown and available profile images.",
+  "permissions": [
+    "downloads",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*",
+    "https://*.licdn.com/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Export LinkedIn profile",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/in/*"
+      ],
+      "js": [
+        "core/runtime.js",
+        "core/profile-model.js",
+        "sections/common.js",
+        "sections/experience.js",
+        "sections/education.js",
+        "sections/certifications.js",
+        "sections/projects.js",
+        "sections/skills.js",
+        "sections/publications.js",
+        "sections/patents.js",
+        "sections/honors.js",
+        "sections/languages.js",
+        "sections/volunteering.js",
+        "sections/courses.js",
+        "sections/test-scores.js",
+        "sections/organizations.js",
+        "sections/services.js",
+        "sections/causes.js",
+        "sections/section-adapters.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "minimum_chrome_version": "116",
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'; connect-src https://www.linkedin.com https://*.licdn.com; img-src 'self' blob:; style-src 'self'"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkedIn Profile Exporter | Export Your LinkedIn Profile for AI</title>
+  <meta name="description" content="Export the LinkedIn profile open in Chrome to clean Markdown and available profile images. Create a local, AI-ready package for ChatGPT, Claude or your own tools.">
+  <meta name="author" content="Piyush Wavre">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://piyushwavre.github.io/linkedin-profile-exporter/">
+  <link rel="icon" href="assets/icon128.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piyushwavre.github.io/linkedin-profile-exporter/">
+  <meta property="og:title" content="LinkedIn Profile Exporter – Export Your LinkedIn Profile for AI">
+  <meta property="og:description" content="A privacy-first Chrome extension that turns the LinkedIn profile open in your browser into clean Markdown plus available profile images.">
+  <meta property="og:image" content="https://piyushwavre.github.io/linkedin-profile-exporter/assets/social-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LinkedIn Profile Exporter",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Google Chrome 116+",
+    "softwareVersion": "1.0.0",
+    "url": "https://piyushwavre.github.io/linkedin-profile-exporter/",
+    "downloadUrl": "https://github.com/PiyushWavre/linkedin-profile-exporter/releases/latest",
+    "codeRepository": "https://github.com/PiyushWavre/linkedin-profile-exporter",
+    "description": "Privacy-first Chrome extension that turns an accessible LinkedIn profile into a local AI-ready package with clean Markdown and available profile images.",
+    "author": {"@type": "Person", "name": "Piyush Wavre"},
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+  }
+  </script>
+  <style>
+    :root{--ink:#0f172a;--muted:#58677f;--blue:#2563eb;--violet:#6d4aff;--green:#15803d;--line:#dce5f2;--bg:#f6f9ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 85% 8%,#e8eaff 0,transparent 28%),linear-gradient(180deg,#f8fbff,#f3f6fc);line-height:1.6}
+    a{color:var(--blue)}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:26px 0}.brand{display:flex;align-items:center;gap:13px}.brand img{width:50px;height:50px}.brand strong{font-size:1.16rem}.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{text-decoration:none;color:#44536d;font-weight:650}.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;padding:55px 0 75px}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:#eaf8ef;color:var(--green);font-weight:750;font-size:.9rem}.hero h1{font-size:clamp(2.6rem,5.2vw,4.65rem);line-height:1.01;margin:20px 0;letter-spacing:-.04em}.hero p{font-size:1.13rem;color:var(--muted);max-width:720px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:27px 0}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:750}.primary{background:linear-gradient(100deg,var(--blue),#3557eb);color:#fff;box-shadow:0 12px 26px rgba(37,99,235,.22)}.secondary{background:#fff;color:#263550;border:1px solid var(--line)}.shot{background:#fff;border:1px solid var(--line);border-radius:24px;padding:12px;box-shadow:0 22px 60px rgba(38,63,110,.13)}.shot img{display:block;width:100%;border-radius:16px}.section{padding:68px 0}.section h2{font-size:2.05rem;margin:0 0 12px;letter-spacing:-.025em}.lead{color:var(--muted);max-width:780px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.card{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:18px;padding:24px}.card h3{margin-top:0}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.flow .card{position:relative}.num{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;font-weight:800;margin-bottom:14px}.prompt{background:#101827;color:#e8eefc;border-radius:15px;padding:18px;font:500 .93rem/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}.privacy{background:linear-gradient(135deg,#effbf2,#f8fffa);border:1px solid #ccead5;border-radius:22px;padding:30px}.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:10px 0}.faq summary{cursor:pointer;font-weight:750}.footer{padding:38px 0 58px;color:var(--muted);border-top:1px solid var(--line)}code{background:#eef2f7;padding:.15rem .4rem;border-radius:6px}@media(max-width:850px){.navlinks{display:none}.hero,.grid,.flow{grid-template-columns:1fr}.hero{padding-top:28px}.section{padding:48px 0}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <div class="brand"><img src="assets/icon128.png" alt="LinkedIn Profile Exporter icon"><div><strong>LinkedIn Profile Exporter</strong><br><span style="color:#64748b">by Piyush Wavre</span></div></div>
+    <nav class="navlinks" aria-label="Primary"><a href="#how">How it works</a><a href="#privacy">Privacy</a><a href="https://github.com/PiyushWavre/linkedin-profile-exporter">GitHub</a></nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <span class="eyebrow">Local-first Chrome extension</span>
+        <h1>Give AI the context of your LinkedIn profile.</h1>
+        <p>Turn the LinkedIn profile open in Chrome into a clean local package with structured Markdown and available profile images. Keep it as a backup or upload it to ChatGPT, Claude or your own tools when you choose.</p>
+        <div class="actions"><a class="btn primary" href="https://github.com/PiyushWavre/linkedin-profile-exporter/releases/latest">Download latest release</a><a class="btn secondary" href="https://github.com/PiyushWavre/linkedin-profile-exporter">View on GitHub</a></div>
+        <p><strong>No telemetry · No application backend · User-triggered download</strong></p>
+      </div>
+      <div class="shot"><img src="assets/product-preview.png" alt="LinkedIn Profile Exporter showing a captured profile summary, section counts and Download ZIP action"></div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2>From LinkedIn to structured context in three steps</h2>
+        <p class="lead">The extension handles the repetitive collection work. You decide what to do with the exported file afterwards.</p>
+        <div class="flow">
+          <article class="card"><div class="num">1</div><h3>Open the profile</h3><p>Start from a LinkedIn profile you can already access in your browser.</p></article>
+          <article class="card"><div class="num">2</div><h3>Capture what is available</h3><p>The extension captures the main profile and supported optional sections, skipping data that is not present.</p></article>
+          <article class="card"><div class="num">3</div><h3>Download when ready</h3><p>Review the dedicated export window, then click Download ZIP to save the Markdown and available images locally.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Use the export with the tools you already use</h2>
+        <p class="lead">LinkedIn Profile Exporter does not call an AI service. It gives you cleaner source material so you can provide context deliberately.</p>
+        <div class="grid">
+          <article class="card"><h3>Profile review</h3><div class="prompt">Review this LinkedIn profile for positioning, clarity and missing information. Preserve the facts and do not invent achievements.</div></article>
+          <article class="card"><h3>About rewrite</h3><div class="prompt">Rewrite my About section using only the experience already present in this export. Keep it practical and professional.</div></article>
+          <article class="card"><h3>CV context</h3><div class="prompt">Use this LinkedIn export as background while helping me prepare a CV. Ask before adding any fact not present in the source.</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="wrap privacy">
+        <h2>Local-first by design</h2>
+        <p>Profile parsing, Markdown generation, image conversion and ZIP creation happen inside the browser extension. The project does not include analytics, telemetry or an application backend. The ZIP download starts only after you click <strong>Download ZIP</strong>.</p>
+        <p>If you later upload the export to an AI service, that service's own privacy and data-use terms apply.</p>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="wrap">
+        <h2>Frequently asked questions</h2>
+        <details><summary>Can I export a LinkedIn profile to Markdown?</summary><p>Yes. The generated ZIP contains a Markdown profile plus the profile picture and banner when those images are available.</p></details>
+        <details><summary>Does it automatically send my LinkedIn profile to ChatGPT or Claude?</summary><p>No. The extension creates a local export only. You choose whether to upload that file to another service.</p></details>
+        <details><summary>Does it scrape LinkedIn profiles in bulk?</summary><p>No. It exports the profile currently open and accessible in the user's browser. It does not provide bulk crawling, login automation or access-control bypassing.</p></details>
+        <details><summary>What happens when a profile section is missing?</summary><p>Supported sections are optional. Missing sections are skipped so the extension can continue with the information actually available.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <strong>LinkedIn Profile Exporter</strong> · Open-source project by Piyush Wavre · MIT License<br>
+    <small>LinkedIn is a trademark of LinkedIn Corporation. This independent project is not affiliated with or endorsed by LinkedIn Corporation or Microsoft.</small>
+  </footer>
+</body>
+</html>

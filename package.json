@@ -1,0 +1,35 @@
+{
+  "name": "linkedin-profile-exporter",
+  "version": "1.0.0",
+  "description": "Privacy-first Chrome extension that turns an accessible LinkedIn profile into an AI-ready local Markdown export.",
+  "author": "Piyush Wavre",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiyushWavre/linkedin-profile-exporter.git"
+  },
+  "homepage": "https://piyushwavre.github.io/linkedin-profile-exporter/",
+  "bugs": {
+    "url": "https://github.com/PiyushWavre/linkedin-profile-exporter/issues"
+  },
+  "keywords": [
+    "linkedin",
+    "chrome-extension",
+    "linkedin-profile",
+    "markdown",
+    "profile-export",
+    "ai-context",
+    "manifest-v3",
+    "privacy-first"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "node scripts/validate.mjs",
+    "test": "npm run check",
+    "package:release": "node scripts/package-release.mjs"
+  }
+}

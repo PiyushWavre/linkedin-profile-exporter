@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://piyushwavre.github.io/linkedin-profile-exporter/sitemap.xml
